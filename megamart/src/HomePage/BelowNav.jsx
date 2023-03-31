@@ -6,17 +6,17 @@ function BelowNav(){
 
 
     return <Box w="75%" m="auto" >
-        <HStack spacing={"30px"} mt="20px">
+        <HStack  spacing={"30px"} mt="20px">
 
-     <Box _hover={{cursor:"pointer"}}>
+     <Box  _hover={{cursor:"pointer"}}>
         <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" position="relative" bottom={"6px"} >
-        <Image src="https://shopping.imimg.com/style/ladies-wear.png" alt="" position={"relative"} top="13px" left="18px"  />
+        <Image src="https://shopping.imimg.com/style/ladies-wear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"}   />
         </Box>
         
         <Menu>
-  <MenuButton as={Button}  _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none"  _hover={{
    background:"none"
-  }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif"  >
+  }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif"   >
      Ladies Wear
   </MenuButton>
   <MenuList fontWeight={"light"} fontFamily="Red Hat Display, sans-serif"  >
@@ -29,18 +29,20 @@ function BelowNav(){
   </Menu>
      </Box>
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px"  >
-        <Image src="https://shopping.imimg.com/style/men-wear.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/men-wear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
-  }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif">
+  }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif"
+  
+  >
     Men Wear
-  </MenuButton>
-  <MenuList fontWeight={"light"} fontFamily="Red Hat Display, sans-serif">
+  </MenuButton  >
+  <MenuList fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
     <MenuItem>Denim Shop</MenuItem>
     <MenuItem>The Culture Shop</MenuItem>
     <MenuItem>Fan Gear</MenuItem>
@@ -51,13 +53,13 @@ function BelowNav(){
      </Box>
 
 
-    <Box>
+    <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"}  boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
-        <Image src="https://shopping.imimg.com/style/footwear.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/footwear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
      Footwear
@@ -73,13 +75,13 @@ function BelowNav(){
      </Box>
    
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" >
-        <Image src="https://shopping.imimg.com/style/beauty-products.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/beauty-products.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
      Beauty <br /> Products
@@ -95,20 +97,20 @@ function BelowNav(){
      </Box>
 
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
-        <Image src="https://shopping.imimg.com/style/mobile-accessories.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/mobile-accessories.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
     Mobile <br/> Accessories
   </MenuButton>
   <MenuList fontWeight={"light"} fontFamily="Red Hat Display, sans-serif">
     <MenuItem>Android</MenuItem>
-    <MenuItem>iPhoney</MenuItem>
+    <MenuItem>iPhone</MenuItem>
     <MenuItem>Headphone</MenuItem>
     <MenuItem>Tablets</MenuItem>
     <MenuItem>Ipods</MenuItem>
@@ -117,13 +119,13 @@ function BelowNav(){
      </Box>
 
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px"  >
-        <Image src="https://shopping.imimg.com/style/home-decor.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/home-decor.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="20px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
      Home Decor
@@ -139,13 +141,13 @@ function BelowNav(){
      </Box>
 
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
-        <Image src="https://shopping.imimg.com/style/artificial-jewellery.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/artificial-jewellery.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="15px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
      Artificial <br /> Jwellery
@@ -160,13 +162,13 @@ function BelowNav(){
   </Menu>
      </Box>
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" > 
-        <Image src="https://shopping.imimg.com/style/fertilizer.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/fertilizer.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button} zIndex={"11"} background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" right="15px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif" >
      Fertilizer
@@ -182,13 +184,13 @@ function BelowNav(){
      </Box>
 
 
-     <Box>
+     <Box _hover={{cursor:"pointer"}}>
      <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" >
-        <Image src="https://shopping.imimg.com/style/light.png" alt="" position={"relative"} top="13px" left="18px" />
+        <Image src="https://shopping.imimg.com/style/light.png" alt="" position={"relative"} top="13px" left="18px"  />
         </Box>
        
         <Menu>
-  <MenuButton as={Button} background="none" _hover={{
+  <MenuButton as={Button}  background="none" _hover={{
    background:"none"
   }} mt="12px" lineHeight={"20px"} position="relative" bottom="5px" fontWeight={"light"} fontFamily="Red Hat Display, sans-serif"  >
      Light
