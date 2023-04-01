@@ -39,44 +39,49 @@ let Ladies= {
 };
 
 
-let Mens= {
-    title1 : "",
-    img1 : "",
-    price1: "",
-    brand1 :"",
-    title2 : "",
-    img2 : "",
-    price2: "",
-    brand2 :"",
-    title3 : "",
-    img3 : "",
-    price3: "",
-    brand3 :"",
-    title4 : "",
-    img4 : "",
-    price4: "",
-    brand4 :"",
-    title5 : "",
-    img5 : "",
-    price5: "",
-    brand5 :"",
-    title6 : "",
-    img6 : "",
-    price6: "",
-    brand6 :"",
-    title7 : "",
-    img7 : "",
-    price7: "",
-    brand7 :"",
-    title8 : "",
-    img8 : "",
-    price8: "",
-    brand8 :"",
+let shoes= {
+    logo: "https://shopping.imimg.com/style/footwear.png",
+    category : "Footwear",
+    title1 : "Hautton New Ultra Fashion Sneaker For Men",
+    img1 : "https://5.imimg.com/data5/ECOM/Default/2022/12/MH/KO/ZT/33805497/img-8809-500x500.jpg",
+    price1: "1,349",
+    brand1 :"Prak Overseas",
+    title2 : "Stylish Artificial Leather Pink Fashion Flats For Women - 6",
+    img2 : "https://5.imimg.com/data5/ECOM/Default/2023/2/QN/CS/GM/181316483/1674348608098-sku-24319-0-500x500.jpg",
+    price2: "360",
+    brand2 :"Instaecart Solutions",
+    title3 : "Elegant Black Embellished Ethnic Flats For Women",
+    img3 : "https://5.imimg.com/data5/ECOM/Default/2023/1/WC/CU/RW/3611652/1560758940078-zaf2030-originnm80prcnt-500x500.jpg",
+    price3: "501",
+    brand3 :"Bongfooodie",
+    title4 : "Formal Stylish Fashionable Patent Derby Shoes For Men (Black)",
+    img4 : "https://5.imimg.com/data5/ECOM/Default/2022/12/TE/DP/MJ/136025257/1-82025142-6fe9-4214-ad2b-d611b6329268-500x500.jpg",
+    price4: "799",
+    brand4 :"Rocket Deals Enterprises LLP",
+    title5 : "Reliable Mesh Self Design Sneakers For Men",
+    img5 : "https://5.imimg.com/data5/ECOM/Default/2023/3/WV/AB/OM/50433867/1654325203893-30-19-dsc64172a-originnm80prcnt-500x500.jpg",
+    price5: "968",
+    brand5 :"Abyalife",
+    title6 : "Generic Women's Patent Leather Flat Sandals (color:black, Material:patent Leather)",
+    img6 : "https://5.imimg.com/data5/ECOM/Default/2023/1/PS/DM/DB/40130482/51307792152-5215b63a87-o-d-500x500.jpg",
+    price6: "361",
+    brand6 :"Chakravarthy Thanga Maligai",
+    title7 : "Elite Red Mesh Sneakers For Men",
+    img7 : "https://5.imimg.com/data5/ECOM/Default/2023/2/GL/AF/PT/111702099/1566922007911-dsc4555-originnm80prcnt-500x500.jpg",
+    price7: "806",
+    brand7 :"Mishka Enterprises",
+    title8 : "Women's Hollow Pointed High Heels Mesh Breathable Stiletto Boots Sandals",
+    img8 : "https://5.imimg.com/data5/ECOM/Default/2023/2/RG/QQ/CF/9422220/high-heels-composite-womens-hollow-pointed-high-heels-mesh-breathable-stiletto-boots-118-500x500.jpg",
+    price8: "4,999",
+    brand8 :"My Online Collection Store",
    
 };
 
-
-let mens=[
+const Mens={
+    route : "mens",
+    logo :"https://shopping.imimg.com/style/men-wear.png",
+    category:"Men Wear",
+    data : [
     {
         id:1,
         title : "Millennial Men Beige Cotton Full Sleeves Shirt",
@@ -112,7 +117,133 @@ let mens=[
         price : "449",
         brand : "Prak Overseas"
     }
-]
+]}
 
-export {Ladies,mens};
-;
+const Beauty={
+    route : "beauty",
+    logo : "https://shopping.imimg.com/style/beauty-products.png",
+    category : "Beauty Products",
+    data : [
+    {
+        id:1,
+        title : "Combo Balm Matte Lipstick(set Of-12) And Kajalnbsp;nbsp;(13 Items In The Set)",
+        img : "https://5.imimg.com/data5/ECOM/Default/2023/3/IJ/AC/PY/67991053/1626955709377-2-23-lenonbeautyadsbalmlipsticksdl5357974061eeb93-originnm80prcnt-500x500.webp",
+        price : "369",
+        brand : "Store Apt"
+    },
+    {
+        id:2,
+        title : "Spectral Mini Gel Colour Lilac",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/12/JI/UN/IE/111907473/1637350646255-sku-1885-0-500x500.jpeg",
+        price : "85",
+        brand : "Parshwa Cakes Delight"
+    },
+    {
+        id:3,
+        title : "Biotique Bio Pearl White Facial Kit (65gm)",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/8/ZV/SU/QF/7304076/pearl-facial-kit-65g-op01-500x500.jpg",
+        price : "250",
+        brand : "Green Leaf"
+    },
+    {
+        id:4,
+        title : "Adivasi Red Onion Hair Growth And Hair Fall Control Kit 200ml ( 100% Organic And Natural )",
+        img : "https://5.imimg.com/data5/ECOM/Default/2023/1/YQ/GG/LC/181316483/1673087641982-sku-16137-0-500x500.jpg",
+        price : "118",
+        brand : "Instaecart Solutions"
+    },
+    {
+        id:5,
+        title : "Green Tea Extra Matte Lipsticks - Pack Of 12",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/7/EY/TG/DC/111702099/1566815252968-ads-green-tea-lipsticks-originnm80prcnt-1000x1000.jpg",
+        price : "245",
+        brand : "Mishka Enterprises"
+    }
+]}
+
+
+
+let Mobile= {
+    logo:"https://shopping.imimg.com/style/mobile-accessories.png",
+    category :"Mobile Accessories",
+    title1 : "Erd Uc-68 Type-c Usb Cable, Braided Rugged Cable, Color May Vary (1 Meter)",
+    img1 : "https://5.imimg.com/data5/ECOM/Default/2023/3/292065280/YC/TI/SH/26954735/erduc68-500x500.png",
+    price1: "399",
+    brand1 :"A To Z Overseas",
+    title2 : "Zebronics Evolve Blue Bluetooth Headset",
+    img2 : "https://5.imimg.com/data5/ECOM/Default/2023/3/293280869/TG/ZR/PV/95869149/6666-500x500.png",
+    price2: "725",
+    brand2 :"The Hobby Shop",
+    title3 : "Luxurykase Korean Bracelet Electroplating Lattice Square Phone Case For Iphone 11 12 13 14 Plus Mini Pro Max",
+    img3 : "https://5.imimg.com/data5/ECOM/Default/2023/3/293763587/IH/MU/ME/16128890/3-68b90ab0-f02c-462f-b939-3272b3026870-500x500.jpg",
+    price3: "799",
+    brand3 :"Arihant Stores",
+    title4 : "6485 Fast Charging For Android & Data Transfer Extra Tough Long Micro Cable For All Compatible Smartphone And Tablets",
+    img4 : "https://5.imimg.com/data5/ECOM/Default/2023/3/EB/KR/IP/64023267/1-fc50fbc3-2b09-42aa-b78d-187c30b72201-500x500.jpg",
+    price4: "599",
+    brand4 :"Deodap",
+    title5 : "Hardshell Phone Case - Looks Like Pac Man?",
+    img5 : "https://5.imimg.com/data5/ECOM/Default/2023/1/NR/RU/VI/31299794/hardshell-phone-case-looks-like-pac-man-190844-500x500.jpg",
+    price5: "395",
+    brand5 :"Enthopia",
+    title6 : "Stiya Kaku Ksc 436 Ruizhuo Unbreakable 3 In 1 Fast Charging Braided Multipurpose Cable With 3.2 A High Current Speed 1 Meter",
+    img6 : "https://5.imimg.com/data5/ECOM/Default/2022/10/NZ/ZN/WG/33805497/7-c91ebc0e-2388-4e38-a290-0966139d5b9f-500x500.jpg",
+    price6: "499",
+    brand6 :"Prak Overseas",
+    title7 : "Ys Earphones/headphone With Ultra Bass & Dolby Sound 3.5mm Jack With Mic & Volume Control For All Samsung/android/ios Devices - (white)",
+    img7 : "https://5.imimg.com/data5/ECOM/Default/2022/12/XG/FE/NR/14558342/60a1-500x500.jpg",
+    price7: "99",
+    brand7 :"Gauba Traders",
+    title8 : "Modernista Powerbass 100 Bluetooth Wireless In Ear Earphones",
+    img8 : "https://5.imimg.com/data5/ECOM/Default/2023/3/293193453/UL/HX/JT/186598767/6-d460f124-ac01-4232-a8ff-91f2d1d58d7b-500x500.jpg",
+    price8: "650",
+    brand8 :"Enthral",
+   
+};
+
+
+const Home={
+    route : "home",
+    logo : "https://shopping.imimg.com/style/home-decor.png",
+    category : "Home Decor",
+    data : [
+    {
+        id:1,
+        title : "Combo Balm Matte Lipstick(set Of-12) And Kajalnbsp;nbsp;(13 Items In The Set)",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/11/SE/VW/KP/64575997/4-e092342f-c8b7-4985-8ec7-456a79fe1f93-500x500.jpg",
+        price : "4,999",
+        brand : "Swasti Sales"
+    },
+    {
+        id:2,
+        title : "1640 Girl Musician Playing Pen Stand Showpiece",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/12/QG/GY/OW/161152847/whatsappimage2021-06-05at5-28-33pm-500x500.jpg",
+        price : "138",
+        brand : "S S Marketing"
+    },
+    {
+        id:3,
+        title : "Microfiber Quilt For Heavy Winter, Double Bed Razai (90x90 Inches)",
+        img : "https://5.imimg.com/data5/ECOM/Default/2022/9/SW/TK/OU/26954735/51tic1spyhl-500x500.jpg",
+        price : "1,899",
+        brand : "A To Z Overseas"
+    },
+    {
+        id:4,
+        title : "Abstract Stylish Wooden Wall Clock",
+        img : "https://5.imimg.com/data5/ECOM/Default/2023/3/291952627/JM/ZP/HF/186159128/7-5-500x500.jpg",
+        price : "1,399",
+        brand : "Macklet"
+    },
+    {
+        id:5,
+        title : "Symphony Wall Art",
+        img : "https://5.imimg.com/data5/ECOM/Default/2023/1/BJ/VX/ME/2403926/whatsapp-image-2021-10-26-at-1-18-31-am-500x500.jpg",
+        price : "5,400",
+        brand : "Shiraz Handicrafts"
+    }
+]}
+
+
+
+export {Ladies,Mens,shoes,Beauty,Mobile,Home};

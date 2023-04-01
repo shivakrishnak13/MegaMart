@@ -1,4 +1,4 @@
-import {Box,Heading,Image} from "@chakra-ui/react";
+import {Box,Image} from "@chakra-ui/react";
 import { useEffect,useState } from "react";
 
 
@@ -27,7 +27,7 @@ const SlideShow=()=>{
 
     index++;
 
-    if(index==array.length){
+    if(index===array.length){
         index=0;
     }
 

@@ -3,22 +3,29 @@ import NavBar from "./NavBar";
 import ScrollBar from "./Scrollbar";
 import FeaturedProducts from "./FeaturedProducts";
 import GridVeiw from "./GridVeiw";
-import {Ladies,mens} from "../Data/Ladies";
-import { Button } from "@chakra-ui/react";
+import {Ladies,Mens,shoes,Beauty,Mobile,Home} from "../Data/Ladies";
 import NormalGrid from "./NormalGrid";
-
+import Footer from "./Footer";
 
 function HomePage(){
-    console.log( "home", mens)
+
+    
+
+
+    console.log( "home", Mens)
    
     return <div>
         <NavBar/>
         <BelowNav/>
         <ScrollBar/>
-        <FeaturedProducts/>
+        <FeaturedProducts  />
         <GridVeiw data={Ladies}/>
-        <NormalGrid data={mens}/>
-        
+        <NormalGrid data={Mens}/>
+        <GridVeiw data={shoes} />
+        <NormalGrid data={Beauty}/>
+        <GridVeiw data={Mobile} />
+        <NormalGrid data={Home} />
+        <Footer/>
     </div>
 };
 
