@@ -1,6 +1,10 @@
 
-import { Heading,Text,Box,HStack,Image,Button,SimpleGrid,Flex } from "@chakra-ui/react";
+import { Heading,Text,Box,Image,Button,SimpleGrid } from "@chakra-ui/react";
+import { Navigate, useNavigate } from "react-router-dom";
 function FeaturedProducts(){
+
+    const nav= useNavigate()
+
 
     let prod=[
         {
@@ -42,6 +46,11 @@ function FeaturedProducts(){
     ]
 
 
+    const HandleClick= (id)=>{
+        
+        nav(`/fetured/${id}`)
+        
+    }
     
 
 
@@ -56,6 +65,8 @@ return <div style={{marginTop:"30px"}}>
 { prod.map((item)=>{
   return <Box key={item.id} w="225px"  h="390px" boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px" 
   textAlign="center"
+  cursor={'pointer'}
+  onClick={()=>HandleClick(item.id)}
    >
    <Image src={item.img} p="15px" w="100%" h="230px"  />
 
@@ -68,25 +79,13 @@ return <div style={{marginTop:"30px"}}>
 
    <Text textAlign={"start"} mt="10px" color={"rgb(46, 49, 146)"} fontSize="20px" fontWeight={"bold"} ml="15px" >₹ {item.price}</Text>
    
-   <Button w="90%"  background={"none"} color=" rgb(46, 49, 146)" border={"1px solid  rgb(46, 49, 146)"} fontWeight="700" _hover={{backgroundColor:" rgb(46, 49, 146)", color:"white"}} mt="10px" >Buy Now</Button>
+   <Button w="90%"  background={"none"} color=" rgb(46, 49, 146)" border={"1px solid  rgb(46, 49, 146)"} fontWeight="700" _hover={{backgroundColor:" rgb(46, 49, 146)", color:"white"}} mt="10px" onClick={()=>console.log("hai")} >Buy Now</Button>
    </Box> 
 })
 
 
 
 }
-
-{/* <Box w="225px"  h="380px" boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
->
-<Image src="https://5.imimg.com/data5/ECOM/Default/2023/1/PA/VR/KU/779497/1650347692818-sku-0046-0-500x500.png" p="5px"/>
-<Text textAlign={"start"} fontSize="15px" fontWeight={"700"} color="#111" mt="6px" ml="15px" >Peri Peri Sauce</Text>
-<Text textAlign={"start"} mt="10px" fontSize={"13px"}
-fontWeight="400" color={"rgb(69, 70, 71)"} ml="15px"
->Stm Foods Private Limited</Text>
-<Text textAlign={"start"} mt="10px" color={"rgb(46, 49, 146)"} fontSize="20px" fontWeight={"bold"} ml="15px" >₹ 235</Text>
-
-<Button w="90%" mt="10px" background={"none"} color=" rgb(46, 49, 146)" border={"1px solid  rgb(46, 49, 146)"} fontWeight="700" _hover={{backgroundColor:" rgb(46, 49, 146)", color:"white"}} >Buy Now</Button>
-</Box> */}
 
 
 

@@ -7,16 +7,18 @@ import { HiShoppingCart } from "react-icons/hi"
 import { BiHelpCircle } from "react-icons/bi";
 import { TbMessageDots, TbUserCircle } from "react-icons/tb";
 import { FiChevronDown } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
 
+    const login = useNavigate();
 
 
 
     return <Box w="100%" h="55px" backgroundColor={"#2E3192"} position="sticky" display={'flex'} justifyContent={'center'}
         top="0" zIndex={"20"} >
         <HStack>
-            <Image src={SuperMart} alt={"logo"} w={'200px'} />
+            <Image src={SuperMart} alt={"logo"} w={'200px'} mt='10px' />
             <HStack spacing={'0'}>
                 <Box w="200px" h="35px"
                     backgroundColor={"white"}
@@ -42,7 +44,7 @@ function NavBar() {
                     borderTopRightRadius={"5px"}
                     borderBottomRightRadius={"5px"}
                 >
-                    <Text mt="6px" color={"white"}
+                    <Text  ml="18px" mt="6px" color={"white"}
 
                     >
                         <SearchIcon mr="7px" />
@@ -85,15 +87,15 @@ function NavBar() {
                     color: "white",
                     cursor: "pointer"
                 }}>
-                    <Icon as={TbMessageDots} boxSize="20px" position={"relative"} top="5px" />
+                    <Icon as={TbMessageDots} boxSize="20px" position={"relative"} top="5px" left='15px' />
                     <Text fontSize={"13px"}>Messages</Text>
                 </Box>
-                <Box _hover={{
+                <Box onClick={()=>login('/login')}  _hover={{
                     color: "white",
                     cursor: "pointer"
                 }}>
-                    <Icon as={TbUserCircle} boxSize="20px" position={"relative"} top="5px" />
-                    <Text fontSize={"13px"}>Login</Text>
+                    <Icon as={TbUserCircle} boxSize="20px" position={"relative"} top="5px" left='5px' />
+                    <Text fontSize={"13px"} >Login</Text>
                 </Box>
             </HStack>
         </HStack>

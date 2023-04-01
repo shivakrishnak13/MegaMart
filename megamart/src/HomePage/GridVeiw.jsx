@@ -1,19 +1,30 @@
 import { Grid, GridItem, Box, Image, Heading, HStack,Text, Button } from "@chakra-ui/react";
-
+import { useNavigate } from "react-router-dom";
 function GridVeiw({data}) {
 
 const{
    title1,title2,title3,title4,title5,title6,title7,title8,brand1,brand2,brand3,brand4,brand5,brand6,brand7,brand8,price1,price2,price3,price4,price5,price6,price7,price8,logo,category,img1,img2,img3,img4,img5,img6,img7,img8
 } = data;
 
+const navigate = useNavigate();
+
+
+
+
 
    return <div>
     <Box w="1245px" m="auto" mt="30px" h="1050px" fontFamily="Red Hat Display, sans-serif" >
 
 
-      <HStack mt="60px" mb="20px">
-         <Box w="50px" h="50px" borderRadius={"50%"} boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"  >
-            <Image src={logo} mt="7px" ml="10px" />
+      <HStack mt="60px" mb="20px" _hover={{
+   cursor: "pointer"
+}}>
+         <Box w="50px" h="50px" borderRadius={"50%"} boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px" _hover={{
+   cursor: "pointer"
+}}  >
+            <Image src={logo} mt="7px" ml="10px" _hover={{
+   cursor: "pointer"
+}} />
          </Box>
          <Heading size={"lg"} textAlign={"start"} fontFamily="Red Hat Display, sans-serif" fontWeight={"bold"}>{category}</Heading>
       </HStack>
@@ -25,13 +36,15 @@ const{
          templateRows='repeat(3, 1fr)'
          templateColumns='repeat(5, 1fr)'
          gap={4}
-
+         _hover={{
+            cursor: "pointer"
+         }}
       >
         <GridItem 
             w="230px"
             h="350px"
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/1')} >
                <Image src={img1}
                   w="180px"
                   h="230px" m="auto" />
@@ -47,7 +60,7 @@ const{
             w="230px"
             h="350px"
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/2')}  >
                <Image src={img2}
                   w="180px"
                   h="230px" m="auto" />
@@ -66,6 +79,7 @@ const{
          >
             <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
             w="100%" h="80%" borderRadius={"7px"}
+            onClick={()=>navigate('/product/3')}
             >
                <Image src={img3}  w="90%" h="100%" m="auto" />
             </Box>
@@ -81,7 +95,7 @@ const{
             w="230px"
             h="350px"
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/4')}  >
                <Image src={img4}
                   w="180px"
                   h="230px" m="auto" />
@@ -100,7 +114,7 @@ const{
             h="600px"
          >
             <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-            w="100%" h="80%" borderRadius={"7px"}
+            w="100%" h="80%" borderRadius={"7px"} onClick={()=>navigate('/product/5')}
             >
                <Image src={img5}  w="80%" h="100%" m="auto" />
             </Box>
@@ -115,7 +129,7 @@ const{
             w="230px"
             h="350px"
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/6')}  >
                <Image src={img6}
                   w="180px"
                   h="230px" m="auto" />
@@ -133,7 +147,7 @@ const{
             position={"relative"}
             bottom="119px"
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/7')}  >
                <Image src={img7}
                   w="180px"
                   h="230px" m="auto" />
@@ -150,8 +164,9 @@ const{
             h="350px"
             position={"relative"}
             bottom="119px"
+            
          >
-            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"}  >
+            <Box boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" w="210px" h="230px" borderRadius={"7px"} onClick={()=>navigate('/product/8')} >
                <Image src={img8}
                   w="180px"
                   h="230px" m="auto" />
@@ -170,9 +185,10 @@ const{
       
 
    </Box>
-   <Button h="50px" ml="50%" w="200px" bg={"#1A237E"} color="white" fontSize={"20px"} fontWeight="500" p="5px" _hover={{
-      bg: "#2E3192" 
-   }} >View More</Button>
+   <Button h="50px" ml="43%" w="250px" bg={"#1A237E"} color="white" fontSize={"20px"} fontWeight="500" p="5px" _hover={{
+      bg: "#2E3192"
+   }}
+   >View More</Button>
    </div>
 };
 
