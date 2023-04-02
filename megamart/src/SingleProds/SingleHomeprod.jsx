@@ -1,5 +1,5 @@
 import NavBar from "../HomePage/NavBar";
-import { Box,Breadcrumb,BreadcrumbItem,BreadcrumbLink,HStack,Image,Text,Heading,Flex,Button,Spacer,Grid,GridItem } from "@chakra-ui/react";
+import { Box,Breadcrumb,BreadcrumbItem,BreadcrumbLink,HStack,Image,Text,Flex,Button,Spacer,Grid,GridItem } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {FcShipped,FcApproval} from "react-icons/fc"
 import {MdLocationOn} from "react-icons/md"
@@ -55,7 +55,7 @@ const navigate = useNavigate()
 const {id} = useParams()
 
 let data= prod.filter((item)=>{
-    return item.id==id
+    return item.id===id
 })
 
 

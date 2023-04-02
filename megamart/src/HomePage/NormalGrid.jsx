@@ -4,7 +4,17 @@ import { useNavigate } from "react-router-dom";
 function NormalGrid({data}){
 
 
-const navigate = useNavigate()
+const navigate = useNavigate();
+
+let cat="";
+
+if(data.category == "Men Wear"){
+   cat="mens_fashion"
+}else if(data.category == "Beauty Products"){
+   cat="beautyproducts"
+}else if (data.category == "Home Decor"){
+   cat="homedecor"
+}
 
 return <Box w="1245px" m="auto" >
  <HStack mt="60px" mb="20px" fontFamily="Red Hat Display, sans-serif">
@@ -49,7 +59,9 @@ return <Box w="1245px" m="auto" >
     
     <Button h="50px" ml="42%" w="250px" bg={"#1A237E"} color="white" fontSize={"20px"} fontWeight="500" p="5px" _hover={{
       bg: "#2E3192" 
-   }} >View More</Button>
+   }} 
+   onClick={()=> navigate(`/category/${cat}`)}
+   >View More</Button>
 
 </Box>
 };

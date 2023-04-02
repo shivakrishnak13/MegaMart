@@ -1,15 +1,16 @@
 import { Box,Image,HStack,Menu,MenuButton,MenuItem,MenuList,Button } from "@chakra-ui/react";
+import {useNavigate} from 'react-router-dom';
 
 function BelowNav(){
 
     
-
+const navigate= useNavigate()
 
     return <Box w="75%" m="auto" >
         <HStack  spacing={"30px"} mt="20px">
 
      <Box  _hover={{cursor:"pointer"}}>
-        <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" position="relative" bottom={"6px"} >
+        <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" position="relative" bottom={"6px"} onClick={()=>navigate('/category/womens')} >
         <Image src="https://shopping.imimg.com/style/ladies-wear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"}   />
         </Box>
         
@@ -30,7 +31,7 @@ function BelowNav(){
      </Box>
 
      <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px"  >
+     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/mens_fashion')}  >
         <Image src="https://shopping.imimg.com/style/men-wear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
@@ -54,7 +55,7 @@ function BelowNav(){
 
 
     <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"}  boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
+     <Box w="70px" h="60px" borderRadius={"50%"}  boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/shoes')}>
         <Image src="https://shopping.imimg.com/style/footwear.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
@@ -76,7 +77,7 @@ function BelowNav(){
    
 
      <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" >
+     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/beautyproducts')} >
         <Image src="https://shopping.imimg.com/style/beauty-products.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
@@ -98,7 +99,7 @@ function BelowNav(){
 
 
      <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
+     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/mobileaccesories')}>
         <Image src="https://shopping.imimg.com/style/mobile-accessories.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        
@@ -120,7 +121,7 @@ function BelowNav(){
 
 
      <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px"  >
+     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/homedecor')} >
         <Image src="https://shopping.imimg.com/style/home-decor.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
         
@@ -142,7 +143,7 @@ function BelowNav(){
 
 
      <Box _hover={{cursor:"pointer"}}>
-     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
+     <Box w="70px" h="60px" borderRadius={"50%"} boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px" onClick={()=>navigate('/category/jewellery')}>
         <Image src="https://shopping.imimg.com/style/artificial-jewellery.png" alt="" position={"relative"} top="13px" left="18px" zIndex={"-1"} />
         </Box>
        

@@ -6,12 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './Theme/ThemeProvider';
 import { BrowserRouter } from 'react-router-dom';
+import ContextProvider from './ContextProvider/ContextProvider';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
+    <ContextProvider>
   <ChakraProvider theme={theme}>
     <App />
   </ChakraProvider>
+    </ContextProvider>
     </BrowserRouter>
 );
 

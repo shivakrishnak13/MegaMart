@@ -10,13 +10,16 @@ import HomeProdSingle from "../SingleProds/SingleHomeprod";
 import LoginPage from "../Pages/Login";
 import SignupPage from "../Pages/Signup";
 import OtpPage from "../Pages/Otp";
+import ApitwoPage from '../Pages/ApiTwo'
+import CartPage from "../Pages/CartPage";
+import PrivateRoute from "./PrivateRoute";
 
 function ALLRoutes(){
 
     return <div>
      <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/products" element={<ProductsPage/>}/>  
+        <Route path="/category/:cat" element={<ApitwoPage/>}/>  
         <Route path="/products/:id" element={<SingleProductsPage/>} />
         <Route path='/fetured/:id' element={<FeaturedProductsPage/>}/>
         <Route path='/product/:id' element={<LadiesProductsPage/>}/>
@@ -25,7 +28,17 @@ function ALLRoutes(){
         <Route path='/product/home/:id' element={<HomeProdSingle/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/signup" element={<SignupPage/>}/>
-        <Route path="/otp" element={<OtpPage/>}/>
+        <Route path="/otp" element={
+       
+        <OtpPage/>
+     
+        }/>
+        <Route path="/prods" element={<ProductsPage/>}/>
+        <Route path="/cart" element={
+            <PrivateRoute>
+        <CartPage/>
+        </PrivateRoute>
+        }/>
     </Routes>
     </div>
 };
