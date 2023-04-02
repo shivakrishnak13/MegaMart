@@ -1,16 +1,29 @@
 import { Grid, GridItem, Box, Image, Heading, HStack,Text, Button } from "@chakra-ui/react";
+import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
+
+
+
 function GridVeiw({data}) {
+
+   
 
 const{
    title1,title2,title3,title4,title5,title6,title7,title8,brand1,brand2,brand3,brand4,brand5,brand6,brand7,brand8,price1,price2,price3,price4,price5,price6,price7,price8,logo,category,img1,img2,img3,img4,img5,img6,img7,img8
 } = data;
 
 const navigate = useNavigate();
+const link = useNavigate()
 
-
-
-
+let cat=""
+if(category == "Ladies Wear"){
+  cat="womens"
+}else if (category== "Footwear"){
+   cat= "shoes"
+}else if (category=="Mobile Accessories"){
+   cat= "mobileaccesories"
+}
 
    return <div>
     <Box w="1245px" m="auto" mt="30px" h="1050px" fontFamily="Red Hat Display, sans-serif" >
@@ -188,6 +201,7 @@ const navigate = useNavigate();
    <Button h="50px" ml="43%" w="250px" bg={"#1A237E"} color="white" fontSize={"20px"} fontWeight="500" p="5px" _hover={{
       bg: "#2E3192"
    }}
+   onClick={()=> link(`/category/${cat}`)}
    >View More</Button>
    </div>
 };

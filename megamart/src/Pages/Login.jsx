@@ -1,12 +1,17 @@
 import NavBar from "../HomePage/NavBar";
 import styles from '../Styles/Login.module.css'
-import '../'
+import freeship from '../Logos/freeshipping.png'
 import Bird from "../Logos/Bird.gif"
 import { useNavigate } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { useState } from "react";
 import { Axios } from "axios";
+import Footer from '../HomePage/Footer';
+import { Popover,PopoverCloseButton,PopoverContent,PopoverHeader,PopoverBody,PopoverTrigger,PopoverFooter,Button,Portal,Box } from "@chakra-ui/react";
+import { useContext } from "react";
+import { Context } from "../ContextProvider/ContextProvider";
+import { AlertIcon,AlertDescription,Alert,AlertTitle } from "@chakra-ui/react";
 
 function LoginPage(){
 
@@ -15,14 +20,17 @@ const link = useNavigate()
 const[email,setemail]= useState();
 const [password,setpassword]=useState();
 
-
+const {SetEmail,SetUsername}= useContext(Context)
+const [mismatch,Setmismatch]= useState(false);
 const HandleSubmit = (e)=>{
   e.preventDefault();
 
 let obj={
      email,
-     password
+     password,
 }
+
+
 
 async function LoginReq(){
      try {
@@ -35,7 +43,24 @@ async function LoginReq(){
           })
 
           let data= await res.json();
-          console.log(data)
+         
+     if(data.accessToken){
+          alert("otp")
+     }else{
+        Setmismatch(true);
+setTimeout(() => {
+     Setmismatch(false);
+}, 2000);
+
+     }
+
+
+         if(res.ok){
+          link('/otp');
+          SetEmail(data.user.email)
+          SetUsername(data.user.username)
+
+         }
      } catch (error) {
          console.log(error) 
      }
@@ -43,7 +68,7 @@ async function LoginReq(){
 
 LoginReq()
 
-  //link('/otp')
+  
 
 }
 
@@ -67,6 +92,15 @@ LoginReq()
 
           </Breadcrumb>
           </div>
+
+
+          {mismatch? <Alert status='error' mt='20px' width={'750px'} ml='420px' borderRadius={'5px'} >
+  <AlertIcon />
+  <AlertTitle>Email Or Password are Incorrect</AlertTitle>
+  <AlertDescription> Please Enter your Correct Email & Password</AlertDescription>
+</Alert>: ""}
+
+
 
      <div className={styles.login}>
      <div id={styles.left}>
@@ -93,10 +127,16 @@ LoginReq()
 
      </div>
           
+     
 
 
+     <div className={styles.banner}>
+     <img src={freeship} alt="baner" style={{borderRadius:"10px"}} />
+</div>
 
    
+
+<Footer/>
 
  
      </div>
