@@ -1,7 +1,7 @@
 
 
 # Megamart
-website for MegaMart
+
 
 
 Welcome to MegaMart
