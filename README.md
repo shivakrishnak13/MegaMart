@@ -9,7 +9,7 @@ Welcome to MegaMart
 MegaMart is Cloned website of Indiamart Shopping, where we can Buy or Sell the products.IndiaMART is India’s largest online B2B marketplace, connecting buyers with suppliers.we can get lots of wholesale products here.This is an individual project Masai School in the Construct Week.i have Cloned 40% features from original website.I complted this project within 5 Days.
 
 
-Deployed URL 👉 
+Deployed URL 👉 https://megamart.vercel.app/
 
 
 
